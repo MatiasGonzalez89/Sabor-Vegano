@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Sabor Vegano</title>
 </head>
 
 <body class="grilla">
-    
+
     <header>
         <div class="logo">
             <img src="./imagenes/sabor vegano.png" alt="logo del sitio">
@@ -45,7 +46,7 @@
 
     <main>
 
-        <section class="contenedor">
+        <section class="contenedor" data-aos="zoom-in">
             <h1 id="titulo">
                 Nuestros Productos
             </h1>
@@ -69,13 +70,12 @@
 
     </main>
 
-    <aside>
-
-        <div class="imagen">
+    <aside >
+        <div class="imagen" data-aos="fade-left">
             <img src="./imagenes/index.png" alt="imagen">
         </div>
 
-        <section class="contenido">
+        <section class="contenido" data-aos="fade-left">
             <h1 class="titulo">
                 Como lo harias en tu casa
             </h1>
@@ -131,7 +131,10 @@
 
     </footer>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
