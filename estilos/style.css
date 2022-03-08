@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
 
 * {
     padding: 0;
@@ -6,504 +6,85 @@
 }
 
 html {
-    height: 100%;
     font-size: 10px;
+    font-family: 'Inconsolata', monospace;
 }
 
 body {
-    background-color: rgba(193, 199, 190, 0.726);
-    font-family: 'Inconsolata', monospace;
-    min-height: 100%;
-    padding: 1rem;
-    text-align: center;
-}
-
-.grilla {
-    display: grid;
-    grid-template-areas:
-        "header  header"
-        "navbar  navbar"
-        "main    sidebar"
-        "footer footer";
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 100px 50px 1fr 100px;
-}
-
-/* HEADER */
-
-header {
-    background-image: linear-gradient(to right, rgb(90, 192, 80), rgb(42, 53, 42));
-    display: flex;
-    grid-area: header;
-}
-
-.logo {
-    width: 55%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.registro {
-    width: 45%;
-    padding: 10px;
+    background-image: url(../imagenes/fondoHeader.jpg);
+    background-size: 100px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
 }
 
-.logo img {
-    border-radius: 4cm;
-    border: 4px solid chocolate;
-    transition: all 2s;
+img {
+    width: 150px;
+    border: 2px solid chocolate;
+    border-radius: 75px;
 }
 
-.logo img:hover {
-    transform: rotate(360deg);
+.bg__gradient {
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
 }
 
-.registro a {
-    list-style: none;
-    text-decoration: none;
-    background-color: rgb(83, 192, 83);
-    color: whitesmoke;
-    font-size: 15px;
-    padding: 5px;
+.central {
+    background-image: url(../imagenes/Vegetarianismo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 90vh;
 }
 
-/* NAV BAR */
-
-.navbar-light .navbar-nav .nav-link.active {
-    color: rgb(228 160 110);
-    font-size: 2.5rem;
-    
+main .row{
+    height: 90vh;
 }
 
-nav {
-    width: 100%;
-    background-color: rgb(232, 236, 225);
-    margin-bottom: 1rem;
-    grid-area: navbar;
+.main__mapa {
+    height: 70vh;
 }
 
-.navbar-collapse {
-    justify-content: space-around;
-}
-
-.nav-link:hover {
-    transform: scale(1.1);
-}
-
-/* MAIN */
-
-main {
-    background-color: rgb(185, 223, 116);
-    margin-left: 1rem;
-    grid-area: main;
-}
-
-.contenedor {
-    width: 100%;
-    height: 900px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.main__index{
+    height: fit-content;
 }
 
 .titulo {
-    font-family: 'Dancing Script', cursive;
-    color: rgb(155, 109, 39);
-    font-size: 4rem;
-    display: block;
+    font-size: 7rem;
+    font-family: 'Dancing Script', 'cursive';
+    color: rgb(255, 251, 0);
+    text-decoration-line: underline;
 }
 
-#titulo {
-    font-family: 'Dancing Script', cursive;
-    color: rgb(155, 109, 39);
-    font-size: 6rem;
-    display: block;
+h2 {
+    font-size: 5rem;
+    color: rgb(245, 197, 245);
+    font-family: 'Pacifico', 'cursive';
+}
+
+footer{
+    margin-top: auto;
+    bottom: 0px;
+}
+.footer {
+    background-color: black;
+    height: 9rem;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    font-size: 3rem;
     padding: 2rem;
 }
 
-.comidas {
-    display: flex;
-    justify-content: center;
-}
-
-.comidas img {
-    width: 200px;
-    height: 150px;
-    border-radius: 3rem;
-    border: 2px solid black;
-    transition: all 2s;
-}
-
-.comidas img:hover {
-    transform: rotateY(360deg);
-}
-
-/* ASIDE */
-
-aside {
-    background-color: rgb(64, 85, 12);
-    margin-right: 1rem;
-    grid-area: sidebar;
-    color: rgb(211, 227, 241);
-}
-
-.contenido {
-    width: 90%;
-    margin: 5%;
-}
-
-.imagen img {
-    width: 90%;
-    padding: 5%;
-    border-radius: 5rem;
-}
-
-.titulo2 {
-    font-family: 'Dancing Script', cursive;
-    color: rgb(221, 184, 115);
-    font-size: 4rem;
-}
-
-.texto {
-    text-align: center;
-    font-size: large;
-    line-height: 1.3;
-}
-
-/* FOOTER */
-
-footer {
-    background-color: rgb(214, 130, 70);
-    border-radius: 1rem;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: footer;
-}
-
-.fuente-icon{
-    color: white;
-    font-size: 3rem;
-    padding: 3rem;
-}
-
-/* SECCION NOSOTROS */
-
-.main_nosotros {
-    background-color: rgb(185, 223, 116);
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-/* SECCION CONTACTO */
-
-.formulario {
-    color: rgb(230, 186, 117);
-    font-size: large;
-    height: 60vh;
-    margin: 2rem;
-    border: 1px solid white;
-    border-radius: 1rem;
-    background-color: rgb(95, 110, 57);
-}
-
-.formulario form {
-    margin: 2rem;
-}
-
-.contacto {
-    background-color: rgb(185, 223, 116);
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: sidebar;
-}
-
-.datos_contacto {
-    color: rgb(230, 186, 117);
-    font-size: large;
-    height: 60vh;
-    margin: 2rem;
-    border: 1px solid white;
-    border-radius: 1rem;
-    background-color: rgb(95, 110, 57);
-}
-
-.datos_contacto .logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.contacto .logo img {
-    width: 15rem;
-    border-radius: 4cm;
-    border: 6px solid chocolate;
-}
-
-/* SECCION TIENDA */
-
-.tienda {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.producto {
-    width: 90%;
-    border-top: 0.2rem dashed rgb(27, 12, 1);
-    margin: 2rem;
-}
-
-.producto__descripcion {
-    width: 90%;
-    border-top: 0.1rem solid rgb(27, 12, 1);
-    border-bottom: 0.1rem solid rgb(27, 12, 1);
-    font-size: large;
-}
-
-.producto img {
-    width: 20%;
-}
-
-.carrito img {
-    width: 10%;
-}
-
-/* SECCION UBICACION */
-
 #mapa {
-    margin: 2rem;
+    width: 70%;
+    height: 50vh;
 }
-
 
 @media screen and (max-width: 768px) {
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata:wght@500&display=swap');
 
-    .grilla {
-        display: grid;
-        grid-template-areas:
-            "header"
-            "navbar"
-            "main"
-            "sidebar"
-            "footer";
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 50px 1fr auto 100px;
+    .main__index{
+    flex-direction: column;
     }
 
-    /* HEADER */
-
-    header {
-        background-image: linear-gradient(to right, rgb(90, 192, 80), rgb(42, 53, 42));
-        display: flex;
-        grid-area: header;
-    }
-
-    .registro a {
-        padding: 2px;
-    }
-
-    /* NAV BAR */
-
-  
-    
-    nav {
-        grid-area: navbar;
-    }
-    
-
-    
-      /* nav {
-        width: 100%;
-        background-color: rgb(232, 236, 225);
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-area: navbar;
-    }
-
-    nav ul {
-        list-style-type: none;
-        display: flex;
-    }
-
-    a {
-        text-decoration: none;
-        color: rgb(230, 186, 117);
-        font-size: 2rem;
-        font-family: sans-serif;
-        font-style: oblique;
-        font-weight: bolder;
-    } */
-
-    /* MAIN */
-
-    main {
-        background-color: rgb(185, 223, 116);
-        margin-bottom: 1rem;
-        border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-area: main;
-    }
-
-    .contenedor {
-        width: 70%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .titulo {
-        font-family: 'Dancing Script', cursive;
-        color: rgb(155, 109, 39);
-        font-size: 4rem;
-    }
-
-    .comidas {
-        display: flex;
-        justify-content: center;
-    }
-
-    .comidas img {
-        /* width: 200px; */
-        border-radius: 3rem;
-        border: 2px solid black;
-    }
-
-    /* ASIDE */
-
-    aside {
-        background-color: rgb(64, 85, 12);
-        margin-bottom: 1rem;
-        border-radius: 1rem;
-        grid-area: sidebar;
-    }
-
-    .contenido {
-        width: 90%;
-        margin: 5%;
-    }
-
-    .imagen img {
-        width: 90%;
-        padding: 5%;
-        border-radius: 5rem;
-    }
-
-    .titulo2 {
-        font-family: 'Dancing Script', cursive;
-        color: rgb(221, 184, 115);
-        font-size: 4rem;
-    }
-
-    .texto {
-        text-align: center;
-        font-size: large;
-        line-height: 1.3;
-    }
-
-    /* FOOTER */
-
-    footer {
-        background-color: rgb(27, 36, 2);
-        border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-area: footer;
-    }
-
-    .footer-nav {
-        width: 90%;
-    }
-
-    .footer-nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-nav li {
-        text-decoration: none;
-    }
-
-    .footer-nav a {
-        color: rgb(230, 210, 177);
-        font-size: 1.5rem;
-        font-family: sans-serif;
-        font-style: oblique;
-        font-weight: bolder;
-    }
-
-    /* SECCION NOSOTROS */
-
-    .main_nosotros {
-        background-color: rgb(185, 223, 116);
-        margin-bottom: 1rem;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* SECCION CONTACTO */
-
-    .formulario {
-        color: rgb(230, 186, 117);
-        font-size: large;
-        height: 60vh;
-        margin: 2rem;
-        border: 1px solid white;
-        border-radius: 1rem;
-        background-color: rgb(64, 85, 12);
-    }
-
-    .formulario form {
-        margin: 2rem;
-    }
-
-    /* SECCION TIENDA */
-
-    .tienda {
-        height: auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .producto {
-        width: 90%;
-        border-top: 0.2rem dashed rgb(27, 12, 1);
-        margin: 2rem;
-    }
-
-    .producto__descripcion {
-        width: 90%;
-        border-top: 0.1rem solid rgb(27, 12, 1);
-        border-bottom: 0.1rem solid rgb(27, 12, 1);
-        font-size: large;
-    }
-
-    .producto img {
-        width: 20%;
-    }
-
-    .carrito img {
-        width: 10%;
-    }
 }
