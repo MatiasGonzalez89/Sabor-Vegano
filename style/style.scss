@@ -1,0 +1,45 @@
+@import "_variables";
+@import "_generales";
+@import "_fuentes";
+@import "_main";
+@import "_productos";
+@import "_footer";
+
+
+img {
+    width: 150px;
+    border: 2px solid $colorLogo;
+    border-radius: 75px;
+}
+
+.bg__gradient {
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+}
+
+.titulo {
+    font-size: 7rem;
+    font-family: 'Dancing Script', 'cursive';
+    color: $colorH1;
+    text-decoration-line: underline;
+}
+
+h2 {
+    font-size: 5rem;
+    color: $colorH2;
+    font-family: 'Pacifico', 'cursive';
+}
+
+#mapa {
+    width: 70%;
+    height: 50vh;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .main__index{
+    flex-direction: column;
+    }
+
+}

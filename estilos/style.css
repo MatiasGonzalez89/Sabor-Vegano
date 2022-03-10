@@ -1,111 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-}
+  padding: 0;
+  margin: 0; }
 
 html {
-    font-size: 10px;
-    font-family: 'Inconsolata', monospace;
-}
+  font-size: 10px;
+  font-family: 'Inconsolata', monospace; }
 
 body {
-    background-image: url(../imagenes/fondoHeader.jpg);
-    background-size: 100px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-img {
-    width: 150px;
-    border: 2px solid chocolate;
-    border-radius: 75px;
-}
-
-.bg__gradient {
-    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
-}
+  background-image: url(../imagenes/fondoHeader.jpg);
+  background-size: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 .central {
-    background-image: url(../imagenes/Vegetarianismo.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    height: 90vh;
-}
+  background-image: url(../imagenes/Vegetarianismo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 90vh; }
+  .central main .row {
+    height: 90vh; }
+    .central main .row .main__index {
+      height: fit-content; }
+    .central main .row .main__mapa {
+      height: 70vh; }
 
-main .row{
-    height: 90vh;
-}
-
-.main__mapa {
-    height: 70vh;
-}
-
-.main__index{
-    height: fit-content;
-}
-
-.titulo {
-    font-size: 7rem;
-    font-family: 'Dancing Script', 'cursive';
-    color: rgb(255, 251, 0);
-    text-decoration-line: underline;
-}
-
-h2 {
-    font-size: 5rem;
-    color: rgb(245, 197, 245);
-    font-family: 'Pacifico', 'cursive';
-}
-
-footer{
-    margin-top: auto;
-    bottom: 0px;
-}
-.footer {
-    background-color: black;
-    height: 9rem;
-    width: 100%;
-}
-
-.footer a {
-    color: white;
-    font-size: 3rem;
-    padding: 2rem;
-}
-
-#mapa {
-    width: 70%;
-    height: 50vh;
-}
-
-.producto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-    margin: 2rem;
-    border-bottom: 1px solid white;
-}
-
-.producto img{
+.producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  margin: 2rem;
+  border-bottom: 1px solid white; }
+  .producto img {
     width: 100px;
     height: 100px;
     padding: 5px;
-    margin-bottom: 10px;
-}
-.producto .carrito{
+    margin-bottom: 10px; }
+  .producto .carrito {
     width: 50px;
-    height: 50px;
-}
+    height: 50px; }
+
+footer {
+  margin-top: auto;
+  bottom: 0px; }
+  footer .footer {
+    background-color: black;
+    height: 9rem;
+    width: 100%; }
+    footer .footer a {
+      color: white;
+      font-size: 3rem;
+      padding: 2rem; }
+
+img {
+  width: 150px;
+  border: 2px solid chocolate;
+  border-radius: 75px; }
+
+.bg__gradient {
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)); }
+
+.titulo {
+  font-size: 7rem;
+  font-family: 'Dancing Script', 'cursive';
+  color: #fffb00;
+  text-decoration-line: underline; }
+
+h2 {
+  font-size: 5rem;
+  color: #f5c5f5;
+  font-family: 'Pacifico', 'cursive'; }
+
+#mapa {
+  width: 70%;
+  height: 50vh; }
 
 @media screen and (max-width: 768px) {
-
-    .main__index{
-    flex-direction: column;
-    }
-
-}
+  .main__index {
+    flex-direction: column; } }
