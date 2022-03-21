@@ -1,45 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Pacifico&display=swap');
 @import "_variables";
 @import "_generales";
-@import "_fuentes";
-@import "_main";
+@import "_header";
 @import "_productos";
 @import "_footer";
+@import "_tienda";
+@import "_nosotros";
 
 
-img {
-    width: 150px;
-    border: 2px solid $colorLogo;
-    border-radius: 75px;
+
+
+
+
+main {
+    background-image: url(../imagenes/Vegetarianismo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr, auto, auto;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    grid-column-end: span 12;
+    min-height: 100vh;
+
+    #carousel {
+        grid-column: 3/11;
+        margin-top: 3rem;
+        border: 2px solid black;
+
+        .carousel-inner img {
+            height: 380px;
+        }
+    }
+
+    .menu {
+        grid-column: 2/6;
+        height: fit-content;
+        padding: 2rem 1rem;
+        @extend .bg__gradient;
+
+        .titulo {
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+
+            li {
+                padding: 1rem 0;
+
+                a {
+                    font-size: 40px;
+                    color: rgb(206, 212, 149);
+                }
+            }
+        }
+    }
+
+    .video {
+        grid-column: 7/12;
+        margin: 0 auto;
+        padding: 2rem;
+        @extend .bg__gradient;
+
+        iframe {
+            margin-top: 2rem;
+        }
+    }
+
+    .tienda {
+        grid-column: 2/12;
+        grid-row: 3/4;
+
+        @include flex(space-around, center, wrap);
+
+        .tienda__card {
+            width: 380px;
+            height: 338.55;
+            margin: 2rem;
+
+
+            img {
+                width: 100%;
+                height: 253.91px;
+            }
+
+            p {
+                font-size: 4rem;
+                color: rgb(206, 212, 149);
+                text-align: center;
+                @extend .bg__gradient;
+
+            }
+        }
+    }
 }
 
-.bg__gradient {
-    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
-}
+.main__contacto{
+    padding: 2rem;
+    grid-template-rows: 1;
 
-.titulo {
-    font-size: 7rem;
-    font-family: 'Dancing Script', 'cursive';
-    color: $colorH1;
-    text-decoration-line: underline;
-}
+    .container-fluid{
+        grid-column: 3/11;
+        @extend .bg__gradient;
 
-h2 {
-    font-size: 5rem;
-    color: $colorH2;
-    font-family: 'Pacifico', 'cursive';
-}
-
-#mapa {
-    width: 70%;
-    height: 50vh;
-}
-
-
-
-@media screen and (max-width: 768px) {
-
-    .main__index{
-    flex-direction: column;
+        h2{
+            font-size: 3rem;
+            color: $colorPrimario;
+            text-align: center;
+        }
     }
 
 }
+
+.main__ubicacion{
+    grid-template-rows: 70vh;
+    @extend .main__contacto;
+
+    #mapa {
+        margin:auto auto;
+        width: 70%;
+        height: 50vh;
+    }
+}
+
+
+@media screen and (max-width: 1353px) {
+
+    main {
+        .menu {
+            .titulo {
+                font-size: 45px;
+            }
+        }
+
+        #carousel {
+            .carousel-inner img {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1193px) {
+
+    main {
+        #carousel {
+            .carousel-inner img {
+                height: 280px;
+            }
+        }
+
+        .video {
+            height: fit-content;
+            margin: auto;
+
+            iframe {
+                width: 360px;
+                margin-left: 2rem;
+            }
+        }
+
+        .tienda {
+            .tienda__card {
+                width: 320px;
+                height: 298.55px;
+
+                p {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 902px) {
+
+    header {
+        .registro ul li {
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            width: 70%;
+
+            li a {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    main {
+        background-size: cover;
+        background-position: center;
+        grid-template-rows: repeat(4, auto);
+
+        #carousel {
+            grid-column: 2/12;
+
+            .carousel-inner img {
+                height: 300px;
+            }
+        }
+
+        .menu {
+            grid-column: 3/11;
+            text-align: center;
+        }
+
+        .video {
+            grid-column: 2/12;
+            grid-row: 3/4;
+        }
+
+        .tienda {
+            grid-row: 4/5;
+
+            .tienda__card {
+                width: 270px;
+                height: 220.55px;
+
+                img {
+                    height: 190.55px;
+                }
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    footer {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        height: fit-content !important;
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+
+    header {
+        height: 235px;
+
+        .registro {
+
+            a {
+                font-size: 1rem !important;
+
+            }
+        }
+
+        nav {
+            flex-direction: column;
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                width: 100%;
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    main {
+
+        #carousel {
+
+            .carousel-inner img {
+                width: 310px;
+                height: 240px;
+            }
+        }
+
+        .menu {
+            grid-column: 2/12;
+
+            .titulo {
+                text-align: center;
+            }
+
+            ul {
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    header{
+        height: fit-content;
+    
+    nav{
+        flex-direction: column !important;
+        padding: 0;
+
+        ul{
+            flex-direction: column !important;
+            width: 100%;
+
+            li{
+                display: block;
+                border-bottom: 2px solid white;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+    
+    main {
+        #carousel {
+
+            .carousel-inner img {
+                width: 280px !important;
+                height: 220px !important;
+            }
+        }
+
+        .menu {
+            grid-column: 1/13;
+            .titulo {
+                font-size: 35px;
+            }
+        }
+
+        .video {
+            grid-column: 1/13;
+            margin: 0;
+            text-align: center;
+            
+            iframe {
+                width: 380px !important;
+                height: 215px !important;
+                
+            }
+
+            .titulo {
+                font-size: 35px;
+            }
+        }
+
+        .tienda{
+
+            .tienda__card{
+                width: 100%;
+            }
+        }
+    }
+
+    //BLOQUE DE SECCIÓN TIENDA//
+
+    .main__tienda{
+        
+        .container{
+            grid-column: 1/13;
+
+            h2{
+                font-size: 3rem;
+            }
+
+            .prod__card{
+
+                h3{
+                    font-size: 2rem;
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+

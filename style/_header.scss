@@ -1,0 +1,52 @@
+header {
+    background-image: url(../imagenes/fondoHeader.jpg);
+    background-size: 100px;
+    background-repeat: repeat;
+    width: 100%;
+}
+
+
+.logo {
+    width: 150px;
+    border: 2px solid $colorLogo;
+    border-radius: 75px;
+}
+
+.registro ul {
+    @include flex(flex-end, center, nowrap);
+    @include reset;
+
+    li {
+        background-color: rgb(24, 24, 24);
+        margin-right: 2rem;
+        padding: 1rem;
+
+        a {
+            color: white;
+            font-size: $sizeLink;
+        }
+    }
+}
+
+nav {
+    @include flex(space-around, center, nowrap);
+    padding-bottom: 2rem;
+
+    ul {
+        list-style-type: none;
+        width: 80%;
+        @include reset();
+        @include flex(space-around, center, nowrap);
+        background-color: rgb(24, 24, 24);
+        border-radius: 1cm;
+
+        li {
+            padding: 1rem;
+
+            a {
+                color: white;
+                font-size: 3rem;
+            }
+        }
+    }
+}

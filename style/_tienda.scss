@@ -1,0 +1,58 @@
+.main__tienda{
+    grid-template-rows: repeat(5,1fr);
+    padding: 2rem 0;
+}
+
+.container{
+    grid-column: 2/12;
+    @extend .bg__gradient;
+
+    h2{
+        font-size: 6rem;
+        color:$colorTitulo;
+        font-weight: bolder;
+        text-align: center;
+        
+    }
+
+    .productos{
+        grid-column: 3/11;
+        @include flex(space-evenly, center, wrap);
+        margin: 1rem auto;
+
+        .prod__card{
+            width: 205px;
+            height: 302.11;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 1rem;
+            border: 1px solid rgb(206, 212, 149);
+    
+            img{
+                width: 200px;
+                height: 20vh;
+            }
+    
+            h3{
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: rgb(206, 212, 149);
+            }
+    
+            p{
+                font-size:2rem ;
+                color: rgb(206, 212, 149);
+            }
+            button{
+                font-size: 2rem;
+                font-weight: bolder;
+                background-color: rgb(206, 212, 149);
+    
+            }
+    }
+
+    
+    }
+}

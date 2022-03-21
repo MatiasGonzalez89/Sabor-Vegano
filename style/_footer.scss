@@ -1,16 +1,76 @@
-footer{
+@mixin h3 {
+    text-align: center;
+    padding: 1rem;
+    color: rgba(182, 189, 194, 0.685);
+}
+
+
+footer {
     margin-top: auto;
     bottom: 0px;
-    .footer {
-        background-color: black;
-        height: 9rem;
-        width: 100%;
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .footer__pagos {
+
+        h3 {
+            @include h3;
+        }
+
+        .footer__pagos--tarjetas {
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+
+            img {
+                margin: 1rem;
+
+            }
+        }
+    }
+
+    .footer__contacto {
+
+        h3 {
+            @include h3;
+        }
+
+        .footer__contacto--arriba {
+            @include flex(center, baseline, wrap);
+
+            i {
+                color: white;
+                font-size: $sizeLink;
+            }
+
+            p {
+                @extend i;
+            }
+        }
+
+        .footer__contacto--abajo {
+            @extend .footer__contacto--arriba;
+        }
+    }
+
+    .footer__redes {
+        h3 {
+            @include h3;
+            padding: 2rem;
+        }
+
         a {
+            text-decoration: none;
             color: white;
             font-size: 3rem;
             padding: 2rem;
         }
-    
     }
 
 }

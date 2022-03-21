@@ -1,0 +1,28 @@
+.main__nosotros{
+    padding: 2rem;
+}
+
+.contenido {
+    grid-column: 2/12;
+    @extend .bg__gradient;
+
+    h2 {
+        font-size: 6rem;
+        color: $colorTitulo;
+        font-weight: bolder;
+        text-align: center;
+        font-family: 'Pacifico', cursive;
+    }
+
+    .contenido__texto {
+        
+        
+        p {
+            padding: 2rem 2rem;
+            grid-column: 4/10;
+            color: $colorPrimario;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}

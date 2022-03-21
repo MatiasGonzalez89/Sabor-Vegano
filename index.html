@@ -18,109 +18,145 @@
 <body>
 
     <header>
-        <!-- =======REGISTRO=======  -->
-        <div class="container-fluid d-flex justify-content-end">
-            <ul class="nav d-flex justify-content-between bg__gradient">
-                <li class="nav-item">
-                    <a class="nav-link text-light fs-3" href="#">Iniciar sesion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light fs-3" href="#">Registro</a>
-                </li>
+        <div class="registro">
+            <ul>
+                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="#">Registrarme</a></li>
             </ul>
         </div>
-
-        <!-- =======NAVBAR======= -->
-        <nav class="navbar navbar-expand-lg navbar-light align-items-center fs-1 container-fluid">
-            <div class=" container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="./imagenes/sabor vegano.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav container d-flex justify-content-evenly bg__gradient">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" href="./secciones/tienda.html">Tienda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" href="./secciones/nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" href="./secciones/contactos.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" href="./secciones/ubicacion.html">Ubicación</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav>
+            <a href="index.html"><img src="./imagenes/sabor vegano.png" class="logo" alt="logo de la marca"></a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./secciones/tienda.html">Tienda</a></li>
+                <li><a href="./secciones/nosotros.html">Nosotros</a></li>
+                <li><a href="./secciones/contactos.html">Contacto</a></li>
+                <li><a href="./secciones/ubicacion.html">Ubicacion</a></li>
+            </ul>
         </nav>
     </header>
 
-
-    <main class="container-fluid central">
-        <div class="row justify-content-center align-items-center">
-            <div class="main__index col-lg-8 col-md-9 col-sm-6 d-flex bg__gradient">
-                <h1 class="titulo">Nuestros Productos:</h1>
-                <div class="d-flex flex-column justify-content-evenly">
-                    <div>
-                        <a class="nav-link" href="#">
-                            <h2>Hamburguesas</h2>
-                        </a>
+    <main>
+        <div id="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagenes/banner.png" class="d-block w-100" alt="...">
                     </div>
-                    <div>
-                        <a class="nav-link" href="#">
-                            <h2>Seitan</h2>
-                        </a>
+                    <div class="carousel-item">
+                        <img src="./imagenes/banner2.png" class="d-block w-100" alt="...">
                     </div>
-                    <div>
-                        <a class="nav-link" href="#">
-                            <h2>Empanadas</h2>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="nav-link" href="#">
-                            <h2>Congelados</h2>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="nav-link" href="#">
-                            <h2>Ensaladas</h2>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="nav-link" href="#">
-                            <h2>Pasteleria</h2>
-                        </a>
+                    <div class="carousel-item">
+                        <img src="./imagenes/banner3.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
+
+        <section class="menu">
+            <h1 class="titulo">Nuestros Productos</h1>
+            <ul>
+                <li><a href="#">Medallones</a></li>
+                <li><a href="#">Seitan</a></li>
+                <li><a href="#">Empanadas</a></li>
+                <li><a href="#">Ensaladas</a></li>
+                <li><a href="#">Pasteleria</a></li>
+            </ul>
+        </section>
+
+        <aside class="video">
+            <h2 class="titulo">Desmintiendo mitos</h2>
+            <iframe width="480" height="315" src="https://www.youtube.com/embed/Tqu3q-TONpw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </aside>
+
+        <section class="tienda">
+            <div class="tienda__card">
+                <a href="#"><img src="./imagenes/medallones.jpg" alt="medallon"></a>
+                <a href="#">
+                    <p>MEDALLONES</p>
+                </a>
+            </div>
+            <div class="tienda__card">
+                <a href="#"><img src="./imagenes/seitan.jfif" alt="medallon"></a>
+                <a href="#">
+                    <p>SEITAN</p>
+                </a>
+            </div>
+            <div class="tienda__card">
+                <a href="#"><img src="./imagenes/empanadas.jpg" alt="medallon"></a>
+                <a href="#">
+                    <p>EMPANADAS</p>
+                </a>
+            </div>
+            <div class="tienda__card">
+                <a href="#"><img src="./imagenes/ensaladas.jpg" alt="Budin"></a>
+                <a href="#">
+                    <p>ESALADAS</p>
+                </a>
+            </div>
+            <div class="tienda__card">
+                <a href="#"><img src="./imagenes/budines.png" alt="Budin"></a>
+                <a href="#">
+                    <p>BUDINES</p>
+                </a>
+            </div>
+        </section>
     </main>
 
-
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col footer d-flex justify-content-center">
-                    <a href="#">
-                        <i class="bi bi-facebook fuente-icon"></i>
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-instagram fuente-icon"></i>
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-youtube fuente-icon"></i>
-                    </a>
-                </div>
+        <div class="footer__pagos">
+            <h3>MEDIOS DE PAGO</h3>
+            <div class="footer__pagos--tarjetas">
+                <img src="./imagenes/icons8-visa.svg" alt="visa">
+                <img src="./imagenes/icons8-mastercard.svg" alt="mastercard">
+                <img src="./imagenes/icons8-american-express.svg" alt="american express">
             </div>
+        </div>
+
+        <div class="footer__contacto">
+            <h3>CONTACTO</h3>
+            <div class="footer__contacto--arriba">
+                <i class="bi bi-telephone"></i>
+                <p>1131432398</p>
+            </div>
+            <div class="footer__contacto--abajo">
+                <i class="bi bi-envelope"></i>
+                <p>saborvegano@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer__redes">
+            <h3>NUESTRAS REDES</h3>
+            <a href="#">
+                <i class="bi bi-facebook fuente-icon"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-instagram fuente-icon"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-youtube fuente-icon"></i>
+            </a>
         </div>
     </footer>
 

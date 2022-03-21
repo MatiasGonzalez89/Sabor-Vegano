@@ -1,46 +1,121 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
+  min-height: 100vh;
+}
+
+.bg__gradient, .container, .contenido, main .menu, main .video, main .tienda .tienda__card p, .main__contacto .container-fluid, .main__ubicacion .container-fluid {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.75)), to(rgba(5, 7, 12, 0.75)));
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+}
+
+.titulo {
+  font-size: 5rem;
+  color: #ba98e6;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
   background-image: url(../imagenes/fondoHeader.jpg);
   background-size: 100px;
-  min-height: 100vh;
+  background-repeat: repeat;
+  width: 100%;
+}
+
+.logo {
+  width: 150px;
+  border: 2px solid chocolate;
+  border-radius: 75px;
+}
+
+.registro ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.central {
-  background-image: url(../imagenes/Vegetarianismo.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 90vh;
+.registro ul li {
+  background-color: #181818;
+  margin-right: 2rem;
+  padding: 1rem;
 }
 
-.central main .row {
-  height: 90vh;
+.registro ul li a {
+  color: white;
+  font-size: 2rem;
 }
 
-.central main .row .main__index {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-bottom: 2rem;
 }
 
-.central main .row .main__mapa {
-  height: 70vh;
+nav ul {
+  list-style-type: none;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #181818;
+  border-radius: 1cm;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 3rem;
 }
 
 .producto {
@@ -56,7 +131,7 @@ body {
   font-size: 2rem;
   color: white;
   margin: 2rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #8f6161;
 }
 
 .producto img {
@@ -74,56 +149,520 @@ body {
 footer {
   margin-top: auto;
   bottom: 0px;
-}
-
-footer .footer {
   background-color: black;
-  height: 9rem;
+  height: 150px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-footer .footer a {
+footer .footer__pagos h3 {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(182, 189, 194, 0.685);
+}
+
+footer .footer__pagos .footer__pagos--tarjetas {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+footer .footer__pagos .footer__pagos--tarjetas img {
+  margin: 1rem;
+}
+
+footer .footer__contacto h3 {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(182, 189, 194, 0.685);
+}
+
+footer .footer__contacto .footer__contacto--arriba, footer .footer__contacto .footer__contacto--abajo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .footer__contacto .footer__contacto--arriba i, footer .footer__contacto .footer__contacto--abajo i, footer .footer__contacto .footer__contacto--arriba p, footer .footer__contacto .footer__contacto--abajo p {
+  color: white;
+  font-size: 2rem;
+}
+
+footer .footer__redes h3 {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(182, 189, 194, 0.685);
+  padding: 2rem;
+}
+
+footer .footer__redes a {
+  text-decoration: none;
   color: white;
   font-size: 3rem;
   padding: 2rem;
 }
 
-img {
-  width: 150px;
-  border: 2px solid chocolate;
-  border-radius: 75px;
+.main__tienda {
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  padding: 2rem 0;
 }
 
-.bg__gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.75)), to(rgba(5, 7, 12, 0.75)));
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+.container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
 }
 
-.titulo {
-  font-size: 7rem;
-  font-family: 'Dancing Script', 'cursive';
-  color: #fffb00;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.container h2 {
+  font-size: 6rem;
+  color: #ba98e6;
+  font-weight: bolder;
+  text-align: center;
 }
 
-h2 {
-  font-size: 5rem;
-  color: #f5c5f5;
-  font-family: 'Pacifico', 'cursive';
+.container .productos {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3/11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1rem auto;
 }
 
-#mapa {
+.container .productos .prod__card {
+  width: 205px;
+  height: 302.11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  border: 1px solid #ced495;
+}
+
+.container .productos .prod__card img {
+  width: 200px;
+  height: 20vh;
+}
+
+.container .productos .prod__card h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ced495;
+}
+
+.container .productos .prod__card p {
+  font-size: 2rem;
+  color: #ced495;
+}
+
+.container .productos .prod__card button {
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: #ced495;
+}
+
+.main__nosotros {
+  padding: 2rem;
+}
+
+.contenido {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+}
+
+.contenido h2 {
+  font-size: 6rem;
+  color: #ba98e6;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.contenido .contenido__texto p {
+  padding: 2rem 2rem;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 6;
+  grid-column: 4/10;
+  color: #ced495;
+  font-size: 2rem;
+  text-align: center;
+}
+
+main {
+  background-image: url(../imagenes/Vegetarianismo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 1fr, auto, auto;
+      grid-template-rows: 1fr, auto, auto;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 4rem;
+  -ms-grid-column-span: 12;
+      grid-column-end: span 12;
+  min-height: 100vh;
+}
+
+main #carousel {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3/11;
+  margin-top: 3rem;
+  border: 2px solid black;
+}
+
+main #carousel .carousel-inner img {
+  height: 380px;
+}
+
+main .menu {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem 1rem;
+}
+
+main .menu .titulo {
+  text-align: left;
+}
+
+main .menu ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+main .menu ul li {
+  padding: 1rem 0;
+}
+
+main .menu ul li a {
+  font-size: 40px;
+  color: #ced495;
+}
+
+main .video {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-column: 7/12;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main .video iframe {
+  margin-top: 2rem;
+}
+
+main .tienda {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .tienda .tienda__card {
+  width: 380px;
+  height: 338.55;
+  margin: 2rem;
+}
+
+main .tienda .tienda__card img {
+  width: 100%;
+  height: 253.91px;
+}
+
+main .tienda .tienda__card p {
+  font-size: 4rem;
+  color: #ced495;
+  text-align: center;
+}
+
+.main__contacto, .main__ubicacion {
+  padding: 2rem;
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+}
+
+.main__contacto .container-fluid, .main__ubicacion .container-fluid {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3/11;
+}
+
+.main__contacto .container-fluid h2, .main__ubicacion .container-fluid h2 {
+  font-size: 3rem;
+  color: #ced495;
+  text-align: center;
+}
+
+.main__ubicacion {
+  -ms-grid-rows: 70vh;
+      grid-template-rows: 70vh;
+}
+
+.main__ubicacion #mapa {
+  margin: auto auto;
   width: 70%;
   height: 50vh;
 }
 
-@media screen and (max-width: 768px) {
-  .main__index {
+@media screen and (max-width: 1353px) {
+  main .menu .titulo {
+    font-size: 45px;
+  }
+  main #carousel .carousel-inner img {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 1193px) {
+  main #carousel .carousel-inner img {
+    height: 280px;
+  }
+  main .video {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto;
+  }
+  main .video iframe {
+    width: 360px;
+    margin-left: 2rem;
+  }
+  main .tienda .tienda__card {
+    width: 320px;
+    height: 298.55px;
+  }
+  main .tienda .tienda__card p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 902px) {
+  header .registro ul li {
+    padding: 0.5rem;
+  }
+  header nav ul {
+    width: 70%;
+  }
+  header nav ul li a {
+    font-size: 2rem;
+  }
+  main {
+    background-size: cover;
+    background-position: center;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+  }
+  main #carousel {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+  main #carousel .carousel-inner img {
+    height: 300px;
+  }
+  main .menu {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3/11;
+    text-align: center;
+  }
+  main .video {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  main .tienda {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  main .tienda .tienda__card {
+    width: 270px;
+    height: 220.55px;
+  }
+  main .tienda .tienda__card img {
+    height: 190.55px;
+  }
+  main .tienda .tienda__card p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  footer {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  header {
+    height: 235px;
+  }
+  header .registro a {
+    font-size: 1rem !important;
+  }
+  header nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  header nav .logo {
+    margin-bottom: 1rem;
+  }
+  header nav ul {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+  main #carousel .carousel-inner img {
+    width: 310px;
+    height: 240px;
+  }
+  main .menu {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+  main .menu .titulo {
+    text-align: center;
+  }
+  main .menu ul {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header nav {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    padding: 0;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    width: 100%;
+  }
+  header nav ul li {
+    display: block;
+    border-bottom: 2px solid white;
+    width: 100%;
+    text-align: center;
+  }
+  main #carousel .carousel-inner img {
+    width: 280px !important;
+    height: 220px !important;
+  }
+  main .menu {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+  main .menu .titulo {
+    font-size: 35px;
+  }
+  main .video {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+    margin: 0;
+    text-align: center;
+  }
+  main .video iframe {
+    width: 380px !important;
+    height: 215px !important;
+  }
+  main .video .titulo {
+    font-size: 35px;
+  }
+  main .tienda .tienda__card {
+    width: 100%;
+  }
+  .main__tienda .container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+  .main__tienda .container h2 {
+    font-size: 3rem;
+  }
+  .main__tienda .container .prod__card h3 {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
