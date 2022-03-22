@@ -12,7 +12,7 @@ html {
 body {
   min-height: 100vh; }
 
-.bg__gradient, .container, .contenido, main .menu, main .video, main .tienda .tienda__card p, .main__contacto .container-fluid, .main__ubicacion .container-fluid {
+.bg__gradient, .container, .main__nosotros .contenido, main .menu, main .video, main .tienda .tienda__card p, .main__contacto .container-fluid, .main__ubicacion .container-fluid {
   background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)); }
 
 .titulo {
@@ -180,94 +180,20 @@ footer {
 
 .main__nosotros {
   padding: 2rem; }
-
-.contenido {
-  grid-column: 2/12; }
-  .contenido h2 {
-    font-size: 6rem;
-    color: #ba98e6;
-    font-weight: bolder;
-    text-align: center;
-    font-family: 'Pacifico', cursive; }
-  .contenido .contenido__texto p {
-    padding: 2rem 2rem;
-    grid-column: 4/10;
-    color: #ced495;
-    font-size: 2rem;
-    text-align: center; }
-
-main {
-  background-image: url(../imagenes/Vegetarianismo.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr, auto, auto;
-  column-gap: 2rem;
-  row-gap: 4rem;
-  grid-column-end: span 12;
-  min-height: 100vh; }
-  main #carousel {
-    grid-column: 3/11;
-    margin-top: 3rem;
-    border: 2px solid black; }
-    main #carousel .carousel-inner img {
-      height: 380px; }
-  main .menu {
-    grid-column: 2/6;
-    height: fit-content;
-    padding: 2rem 1rem; }
-    main .menu .titulo {
-      text-align: left; }
-    main .menu ul {
-      list-style-type: none;
-      text-align: left; }
-      main .menu ul li {
-        padding: 1rem 0; }
-        main .menu ul li a {
-          font-size: 40px;
-          color: #ced495; }
-  main .video {
-    grid-column: 7/12;
-    margin: 0 auto;
-    padding: 2rem; }
-    main .video iframe {
-      margin-top: 2rem; }
-  main .tienda {
-    grid-column: 2/12;
-    grid-row: 3/4;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; }
-    main .tienda .tienda__card {
-      width: 380px;
-      height: 338.55;
-      margin: 2rem; }
-      main .tienda .tienda__card img {
-        width: 100%;
-        height: 253.91px; }
-      main .tienda .tienda__card p {
-        font-size: 4rem;
-        color: #ced495;
-        text-align: center; }
-
-.main__contacto, .main__ubicacion {
-  padding: 2rem;
-  grid-template-rows: 1; }
-  .main__contacto .container-fluid, .main__ubicacion .container-fluid {
-    grid-column: 3/11; }
-    .main__contacto .container-fluid h2, .main__ubicacion .container-fluid h2 {
-      font-size: 3rem;
+  .main__nosotros .contenido {
+    grid-column: 2/12; }
+    .main__nosotros .contenido h2 {
+      font-size: 6rem;
+      color: #ba98e6;
+      font-weight: bolder;
+      text-align: center;
+      font-family: 'Pacifico', cursive; }
+    .main__nosotros .contenido .contenido__texto p {
+      padding: 2rem 2rem;
+      grid-column: 4/10;
       color: #ced495;
+      font-size: 2rem;
       text-align: center; }
-
-.main__ubicacion {
-  grid-template-rows: 70vh; }
-  .main__ubicacion #mapa {
-    margin: auto auto;
-    width: 70%;
-    height: 50vh; }
 
 @media screen and (max-width: 1353px) {
   main .menu .titulo {
@@ -388,3 +314,76 @@ main {
       font-size: 3rem; }
     .main__tienda .container .prod__card h3 {
       font-size: 2rem; } }
+
+main {
+  background-image: url(../imagenes/Vegetarianismo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr, auto, auto;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  grid-column-end: span 12;
+  min-height: 100vh; }
+  main #carousel {
+    grid-column: 3/11;
+    margin-top: 3rem;
+    border: 2px solid black; }
+    main #carousel .carousel-inner img {
+      height: 380px; }
+  main .menu {
+    grid-column: 2/6;
+    height: fit-content;
+    padding: 2rem 1rem; }
+    main .menu .titulo {
+      text-align: left; }
+    main .menu ul {
+      list-style-type: none;
+      text-align: left; }
+      main .menu ul li {
+        padding: 1rem 0; }
+        main .menu ul li a {
+          font-size: 40px;
+          color: #ced495; }
+  main .video {
+    grid-column: 7/12;
+    margin: 0 auto;
+    padding: 2rem; }
+    main .video iframe {
+      margin-top: 2rem; }
+  main .tienda {
+    grid-column: 2/12;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; }
+    main .tienda .tienda__card {
+      width: 380px;
+      height: 338.55;
+      margin: 2rem; }
+      main .tienda .tienda__card img {
+        width: 100%;
+        height: 253.91px; }
+      main .tienda .tienda__card p {
+        font-size: 4rem;
+        color: #ced495;
+        text-align: center; }
+
+.main__contacto, .main__ubicacion {
+  padding: 2rem;
+  grid-template-rows: 1; }
+  .main__contacto .container-fluid, .main__ubicacion .container-fluid {
+    grid-column: 3/11; }
+    .main__contacto .container-fluid h2, .main__ubicacion .container-fluid h2 {
+      font-size: 3rem;
+      color: #ced495;
+      text-align: center; }
+
+.main__ubicacion {
+  grid-template-rows: 70vh; }
+  .main__ubicacion #mapa {
+    margin: auto auto;
+    width: 70%;
+    height: 50vh; }

@@ -12,6 +12,8 @@ header {
     border-radius: 75px;
 }
 
+
+
 .registro ul {
     @include flex(flex-end, center, nowrap);
     @include reset;
