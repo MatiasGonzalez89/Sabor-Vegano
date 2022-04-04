@@ -1,11 +1,12 @@
 .main__tienda{
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5,auto);
     padding: 2rem 0;
 }
 
 .container{
     grid-column: 2/12;
     @extend .bg__gradient;
+    height: fit-content;
 
     h2{
         font-size: 6rem;
@@ -49,7 +50,6 @@
                 font-size: 2rem;
                 font-weight: bolder;
                 background-color: rgb(206, 212, 149);
-    
             }
     }
 

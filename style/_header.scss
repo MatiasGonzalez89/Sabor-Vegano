@@ -3,52 +3,92 @@ header {
     background-size: 100px;
     background-repeat: repeat;
     width: 100%;
-}
 
+    .registro {
 
-.logo {
-    width: 150px;
-    border: 2px solid $colorLogo;
-    border-radius: 75px;
-}
+        ul {
+            @include flex(flex-end, center, nowrap);
+            @include reset;
 
+            li {
+                background-color: rgb(24, 24, 24);
+                margin-right: 2rem;
+                padding: 1rem;
 
+                a {
+                    color: white;
+                    font-size: $sizeLink;
+                }
+            }
 
-.registro ul {
-    @include flex(flex-end, center, nowrap);
-    @include reset;
+            li:hover {
+                background-color: rgba(5, 7, 12, 0.75);
 
-    li {
-        background-color: rgb(24, 24, 24);
-        margin-right: 2rem;
-        padding: 1rem;
-
-        a {
-            color: white;
-            font-size: $sizeLink;
-        }
-    }
-}
-
-nav {
-    @include flex(space-around, center, nowrap);
-    padding-bottom: 2rem;
-
-    ul {
-        list-style-type: none;
-        width: 80%;
-        @include reset();
-        @include flex(space-around, center, nowrap);
-        background-color: rgb(24, 24, 24);
-        border-radius: 1cm;
-
-        li {
-            padding: 1rem;
-
-            a {
-                color: white;
-                font-size: 3rem;
+                a {
+                    display: block;
+                    transform: scale(1.1);
+                    color: #fff;
+                }
             }
         }
     }
+
+
+    #btn-menu {
+        display: none;
+    }
+
+    nav {
+        @include flex(space-around, center, nowrap);
+        padding-bottom: 2rem;
+
+        .logo {
+            width: 150px;
+            border: 2px solid $colorLogo;
+            border-radius: 75px;
+        }
+
+        .logo:hover{
+            transform: rotate(360deg);
+            transition: all 1s;
+        }
+
+        .logo2 {
+            @extend .logo;
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            width: 80%;
+            @include reset();
+            @include flex(space-around, center, nowrap);
+            background-color: rgb(24, 24, 24);
+            border-radius: 1cm;
+
+            li {
+                padding: 1rem;
+                flex-grow: 1;
+                text-align: center;
+
+                a {
+                    color: white;
+                    font-size: 3rem;
+                }
+            }
+
+            li:hover {
+                background-color: rgba(5, 7, 12, 0.75);
+                border-radius: 1cm;
+
+                a {
+                    display: block;
+                    transform: scale(1.1);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
 }

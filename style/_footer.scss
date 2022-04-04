@@ -11,13 +11,9 @@ footer {
     background-color: black;
     height: 150px;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+    @include flex(space-evenly, center, wrap);
 
     .footer__pagos {
-
         h3 {
             @include h3;
         }
@@ -36,7 +32,6 @@ footer {
     }
 
     .footer__contacto {
-
         h3 {
             @include h3;
         }

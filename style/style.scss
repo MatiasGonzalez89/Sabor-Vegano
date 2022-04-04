@@ -6,7 +6,7 @@
 @import "_footer";
 @import "_tienda";
 @import "_nosotros";
-@import "_mediaqueries";
+
 
 
 main {
@@ -15,7 +15,7 @@ main {
     background-attachment: fixed;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr, auto, auto;
+    grid-template-rows: 1fr, auto, auto, auto;
     column-gap: 2rem;
     row-gap: 4rem;
     grid-column-end: span 12;
@@ -52,6 +52,11 @@ main {
                     font-size: 40px;
                     color: rgb(206, 212, 149);
                 }
+
+                a:hover{
+                    display:block;
+                    transform:scaleY(1.2);
+                }
             }
         }
     }
@@ -70,14 +75,13 @@ main {
     .tienda {
         grid-column: 2/12;
         grid-row: 3/4;
-
         @include flex(space-around, center, wrap);
 
         .tienda__card {
             width: 380px;
             height: 338.55;
             margin: 2rem;
-
+            @extend .bg__gradient;
 
             img {
                 width: 100%;
@@ -88,49 +92,404 @@ main {
                 font-size: 4rem;
                 color: rgb(206, 212, 149);
                 text-align: center;
-                @extend .bg__gradient;
+            }
+        }
 
+        .tienda__card:hover{
+            background-color: rgba($color: #d1c9c9, $alpha: 0.75);
+        }
+    }
+}
+
+.main__contacto {
+    grid-template-rows: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .formulario {
+        grid-column: 3/11;
+        @extend .bg__gradient;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        color: $colorPrimario;
+        font-size: 2rem;
+        padding: 2rem;
+
+        h2 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .control {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            border: 1px solid $colorPrimario;
+            font-size: 2rem;
+            color: $colorPrimario;
+            background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+        }
+
+        .botones {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .boton {
+                width: 40%;
+                background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+                border: 1px solid $colorPrimario;
+                color: $colorPrimario;
+                border-radius: 5px;
             }
         }
     }
 }
 
-.main__contacto{
-    padding: 2rem;
-    grid-template-rows: 1;
+.main__ubicacion {
+    @include flex(center, center, wrap);
 
-    .container-fluid{
-        grid-column: 3/11;
+    #mapa {
+        height: 600px;
+        width: 700px;
+        @include flex(center, center, wrap);
         @extend .bg__gradient;
+    }
+}
 
-        h2{
-            font-size: 3rem;
-            color: $colorPrimario;
-            text-align: center;
+
+@media screen and (max-width: 1353px) {
+
+    main {
+        .menu {
+            .titulo {
+                font-size: 45px;
+            }
+        }
+
+        #carousel {
+            .carousel-inner img {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1193px) {
+
+    main {
+        #carousel {
+            .carousel-inner img {
+                height: 280px;
+            }
+        }
+
+        .video {
+            height: fit-content;
+            margin: auto;
+
+            iframe {
+                width: 360px;
+                margin-left: 2rem;
+            }
+        }
+
+        .tienda {
+            .tienda__card {
+                width: 320px;
+                height: 298.55px;
+
+                p {
+                    font-size: 3rem;
+                }
+            }
         }
     }
 
-}
+    .main__ubicacion {
+        #mapa {
+            height: 500px;
+            width: 600px;
 
-.main__ubicacion{
-    grid-template-rows: 70vh;
-    @extend .main__contacto;
-
-    #mapa {
-        margin:auto auto;
-        width: 70%;
-        height: 50vh;
+            iframe {
+                height: 300px;
+                width: 400px;
+            }
+        }
     }
 }
 
+@media screen and (max-width: 902px) {
 
+    header {
+        .registro {
+            ul {
+                li {
+                    padding: 0.5rem;
+                }
+            }
+        }
 
+        nav {
+            ul {
+                width: 70%;
 
+                li {
+                    a {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
 
+    main {
+        background-size: cover;
+        background-position: center;
+        grid-template-rows: repeat(4, auto);
 
+        #carousel {
+            grid-column: 2/12;
 
+            .carousel-inner img {
+                height: 300px;
+            }
+        }
 
+        .menu {
+            grid-column: 3/11;
+            grid-row: 2/3;
+            text-align: center;
+        }
 
+        .video {
+            grid-column: 2/12;
+            grid-row: 3/4;
+        }
 
+        .tienda {
+            grid-row: 4/5;
+            grid-row: 4/5;
 
+            .tienda__card {
+                width: 270px;
+                height: 220.55px;
 
+                img {
+                    height: 190.55px;
+                }
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    footer {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        height: fit-content !important;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    header {
+        height: 235px;
+
+        .registro {
+            a {
+                font-size: 1rem !important;
+            }
+        }
+
+        nav {
+            flex-direction: column;
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                width: 100%;
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    main {
+        #carousel {
+            .carousel-inner img {
+                width: 310px;
+                height: 240px;
+            }
+        }
+
+        .menu {
+            grid-column: 2/12;
+
+            .titulo {
+                text-align: center;
+            }
+
+            ul {
+                text-align: center;
+            }
+        }
+    }
+
+    .main__ubicacion {
+
+        #mapa {
+            height: 400px;
+            width: 450px;
+
+            iframe {
+                height: 300px;
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    header {
+        height: fit-content;
+
+        nav {
+            padding: 0;
+
+            .logo{
+                display: none;
+            }
+
+            .logo2{
+                display: block;
+            }
+
+            ul {
+                flex-direction: column;
+                position: absolute;
+                width: 100%;
+                display: none;
+
+                li {
+                    border-bottom: 2px solid white;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        #btn-menu:checked ~ nav ul{
+            display: block;
+            margin-top: 400px;
+        }
+    }
+
+    main {
+        #carousel {
+            .carousel-inner img {
+                height: 200px;
+            }
+        }
+
+        .menu {
+            grid-column: 2/12;
+
+            .titulo {
+                font-size: 35px;
+            }
+
+            ul li a {
+                font-size: 30px;
+            }
+        }
+
+        .video {
+            grid-column: 2/12;
+            text-align: center;
+            padding-bottom: 1rem;
+            margin: 0;
+
+            iframe {
+                width: 250px;
+                height: 200px;
+            }
+
+            .titulo {
+                font-size: 35px;
+            }
+        }
+
+        .tienda {
+            .tienda__card {
+                width: 100%;
+            }
+        }
+    }
+
+    .main__tienda {
+        grid-template-rows: repeat(5, auto);
+        row-gap: 10rem;
+        padding: 10rem 0;
+
+        .container {
+            grid-column: 3/11;
+            height: fit-content;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            .prod__card {
+
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .main__contacto {
+        .formulario {
+            h2 {
+                font-size: 3rem;
+            }
+
+            .botones {
+                .boton {
+                    width: 46%;
+                }
+            }
+        }
+    }
+
+    .main__ubicacion {
+        #mapa {
+            grid-column: 2/12;
+            height: fit-content;
+
+            iframe {
+                width: 350px;
+                height: 350px;
+                margin: 3rem 0px;
+            }
+        }
+    }
+}

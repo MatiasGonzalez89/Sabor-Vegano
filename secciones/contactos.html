@@ -18,52 +18,51 @@
 <body>
 
     <header>
+
+        <!-- REGISTRO E INICIO DE SESIÓN -->
         <div class="registro">
             <ul>
-                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
                 <li><a href="#">Registrarme</a></li>
             </ul>
         </div>
+
+        <!-- BARRA DE NAVEGACIÓN -->
+        <input type="checkbox" id="btn-menu">
+
         <nav>
-            <a href="index.html"><img src="../imagenes/sabor vegano.png" class="logo" alt="logo de la marca"></a>
+            <label for="btn-menu"><img src="../imagenes/sabor vegano.png" class="logo" alt="logo de la marca">
+            </label>
+            <label for="btn-menu"><img src="../imagenes/logo2.png" class="logo2" alt="logo de la marca"></label>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contactos.html">Contacto</a></li>
-                <li><a href="ubicacion.html">Ubicacion</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main__contacto">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div
-                    class="main col-xl-10 col-lg-8 col-md-8 col-sm-10 col-xs-12 d-flex flex-column justify-content-between  bg__gradient mt-5 mb-5">
-                    <h2>SABOR VEGANO</h2>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label text-light fs-1">Nombre</label>
-                        <input type="name" class="form-control fs-1" id="exampleFormControlInput1"
-                            placeholder="Ingrese su nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label text-light fs-1">Email</label>
-                        <input type="email" class="form-control fs-1" id="exampleFormControlInput1"
-                            placeholder="Ingrese su email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label text-light fs-1">Dejenos su
-                            comentario</label>
-                        <textarea class="form-control fs-3" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary text-light fs-1 bg-dark">Enviar</button>
-                </div>
+        <form class="formulario">
+
+            <h2>DEJENOS SU COMENTARIO</h2>
+            <input class="control" type="text" name="nombre" placeholder="Ingrese su nombre">
+            <input class="control" type="text" name="email" placeholder="Ingrese su email">
+            <textarea class="control" name="comentario" placeholder="Escriba su comentario" cols="30"
+                rows="5"></textarea>
+            <div class="botones">
+                <input class="boton" type="submit" value="Enviar formulario">
+                <input class="boton" type="reset" value="Limpiar formulario">
             </div>
-        </div>
+
+        </form>
     </main>
 
     <footer>
+
+        <!-- MEDIOS DE PAGO -->
         <div class="footer__pagos">
             <h3>MEDIOS DE PAGO</h3>
             <div class="footer__pagos--tarjetas">
@@ -73,6 +72,7 @@
             </div>
         </div>
 
+        <!-- DATOS DE CONTACTO -->
         <div class="footer__contacto">
             <h3>CONTACTO</h3>
             <div class="footer__contacto--arriba">
@@ -85,6 +85,7 @@
             </div>
         </div>
 
+        <!-- REDES SOCIALES -->
         <div class="footer__redes">
             <h3>NUESTRAS REDES</h3>
             <a href="#">

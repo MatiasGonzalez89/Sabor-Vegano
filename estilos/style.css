@@ -12,13 +12,13 @@ html {
 body {
   min-height: 100vh; }
 
-.bg__gradient, .container, .main__nosotros .contenido, main .menu, main .video, main .tienda .tienda__card p, .main__contacto .container-fluid, .main__ubicacion .container-fluid {
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)); }
+.bg__gradient, .container, .main__nosotros .contenido, main .menu, main .video, main .tienda .tienda__card, .main__contacto .formulario, .main__ubicacion #mapa {
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+  border-radius: 5px; }
 
 .titulo {
   font-size: 5rem;
   color: #ba98e6;
-  font-family: 'Pacifico', cursive;
   text-align: center; }
 
 a {
@@ -29,51 +29,70 @@ header {
   background-size: 100px;
   background-repeat: repeat;
   width: 100%; }
-
-.logo {
-  width: 150px;
-  border: 2px solid chocolate;
-  border-radius: 75px; }
-
-.registro ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-  .registro ul li {
-    background-color: #181818;
-    margin-right: 2rem;
-    padding: 1rem; }
-    .registro ul li a {
-      color: white;
-      font-size: 2rem; }
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding-bottom: 2rem; }
-  nav ul {
-    list-style-type: none;
-    width: 80%;
+  header .registro ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; }
+    header .registro ul li {
+      background-color: #181818;
+      margin-right: 2rem;
+      padding: 1rem; }
+      header .registro ul li a {
+        color: white;
+        font-size: 2rem; }
+    header .registro ul li:hover {
+      background-color: rgba(5, 7, 12, 0.75); }
+      header .registro ul li:hover a {
+        display: block;
+        transform: scale(1.1);
+        color: #fff; }
+  header #btn-menu {
+    display: none; }
+  header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
-    background-color: #181818;
-    border-radius: 1cm; }
-    nav ul li {
-      padding: 1rem; }
-      nav ul li a {
-        color: white;
-        font-size: 3rem; }
+    padding-bottom: 2rem; }
+    header nav .logo, header nav .logo2 {
+      width: 150px;
+      border: 2px solid chocolate;
+      border-radius: 75px; }
+    header nav .logo:hover, header nav .logo2:hover {
+      transform: rotate(360deg);
+      transition: all 1s; }
+    header nav .logo2 {
+      display: none; }
+    header nav ul {
+      list-style-type: none;
+      width: 80%;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+      background-color: #181818;
+      border-radius: 1cm; }
+      header nav ul li {
+        padding: 1rem;
+        flex-grow: 1;
+        text-align: center; }
+        header nav ul li a {
+          color: white;
+          font-size: 3rem; }
+      header nav ul li:hover {
+        background-color: rgba(5, 7, 12, 0.75);
+        border-radius: 1cm; }
+        header nav ul li:hover a {
+          display: block;
+          transform: scale(1.1);
+          color: #fff; }
 
 .producto {
   display: flex;
@@ -137,11 +156,12 @@ footer {
     padding: 2rem; }
 
 .main__tienda {
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
   padding: 2rem 0; }
 
 .container {
-  grid-column: 2/12; }
+  grid-column: 2/12;
+  height: fit-content; }
   .container h2 {
     font-size: 6rem;
     color: #ba98e6;
@@ -195,133 +215,13 @@ footer {
       font-size: 2rem;
       text-align: center; }
 
-@media screen and (max-width: 1353px) {
-  main .menu .titulo {
-    font-size: 45px; }
-  main #carousel .carousel-inner img {
-    height: 320px; } }
-
-@media screen and (max-width: 1193px) {
-  main #carousel .carousel-inner img {
-    height: 280px; }
-  main .video {
-    height: fit-content;
-    margin: auto; }
-    main .video iframe {
-      width: 360px;
-      margin-left: 2rem; }
-  main .tienda .tienda__card {
-    width: 320px;
-    height: 298.55px; }
-    main .tienda .tienda__card p {
-      font-size: 3rem; } }
-
-@media screen and (max-width: 902px) {
-  header .registro ul li {
-    padding: 0.5rem; }
-  header nav ul {
-    width: 70%; }
-    header nav ul li a {
-      font-size: 2rem; }
-  main {
-    background-size: cover;
-    background-position: center;
-    grid-template-rows: repeat(4, auto); }
-    main #carousel {
-      grid-column: 2/12; }
-      main #carousel .carousel-inner img {
-        height: 300px; }
-    main .menu {
-      grid-column: 3/11;
-      text-align: center; }
-    main .video {
-      grid-column: 2/12;
-      grid-row: 3/4; }
-    main .tienda {
-      grid-row: 4/5; }
-      main .tienda .tienda__card {
-        width: 270px;
-        height: 220.55px; }
-        main .tienda .tienda__card img {
-          height: 190.55px; }
-        main .tienda .tienda__card p {
-          font-size: 2rem; } }
-
-@media screen and (max-width: 720px) {
-  footer {
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    height: fit-content !important; } }
-
-@media screen and (max-width: 630px) {
-  header {
-    height: 235px; }
-    header .registro a {
-      font-size: 1rem !important; }
-    header nav {
-      flex-direction: column; }
-      header nav .logo {
-        margin-bottom: 1rem; }
-      header nav ul {
-        width: 100%;
-        border-radius: 0;
-        margin: 0; }
-  main #carousel .carousel-inner img {
-    width: 310px;
-    height: 240px; }
-  main .menu {
-    grid-column: 2/12; }
-    main .menu .titulo {
-      text-align: center; }
-    main .menu ul {
-      text-align: center; } }
-
-@media screen and (max-width: 500px) {
-  header {
-    height: fit-content; }
-    header nav {
-      flex-direction: column !important;
-      padding: 0; }
-      header nav ul {
-        flex-direction: column !important;
-        width: 100%; }
-        header nav ul li {
-          display: block;
-          border-bottom: 2px solid white;
-          width: 100%;
-          text-align: center; }
-  main #carousel .carousel-inner img {
-    width: 280px !important;
-    height: 220px !important; }
-  main .menu {
-    grid-column: 1/13; }
-    main .menu .titulo {
-      font-size: 35px; }
-  main .video {
-    grid-column: 1/13;
-    margin: 0;
-    text-align: center; }
-    main .video iframe {
-      width: 380px !important;
-      height: 215px !important; }
-    main .video .titulo {
-      font-size: 35px; }
-  main .tienda .tienda__card {
-    width: 100%; }
-  .main__tienda .container {
-    grid-column: 1/13; }
-    .main__tienda .container h2 {
-      font-size: 3rem; }
-    .main__tienda .container .prod__card h3 {
-      font-size: 2rem; } }
-
 main {
   background-image: url(../imagenes/Vegetarianismo.jpg);
   background-size: cover;
   background-attachment: fixed;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr, auto, auto;
+  grid-template-rows: 1fr, auto, auto, auto;
   column-gap: 2rem;
   row-gap: 4rem;
   grid-column-end: span 12;
@@ -346,6 +246,9 @@ main {
         main .menu ul li a {
           font-size: 40px;
           color: #ced495; }
+        main .menu ul li a:hover {
+          display: block;
+          transform: scaleY(1.2); }
   main .video {
     grid-column: 7/12;
     margin: 0 auto;
@@ -370,20 +273,217 @@ main {
         font-size: 4rem;
         color: #ced495;
         text-align: center; }
+    main .tienda .tienda__card:hover {
+      background-color: rgba(209, 201, 201, 0.75); }
 
-.main__contacto, .main__ubicacion {
-  padding: 2rem;
-  grid-template-rows: 1; }
-  .main__contacto .container-fluid, .main__ubicacion .container-fluid {
-    grid-column: 3/11; }
-    .main__contacto .container-fluid h2, .main__ubicacion .container-fluid h2 {
-      font-size: 3rem;
+.main__contacto {
+  grid-template-rows: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main__contacto .formulario {
+    grid-column: 3/11;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #ced495;
+    font-size: 2rem;
+    padding: 2rem; }
+    .main__contacto .formulario h2 {
+      font-size: 4rem;
+      margin-bottom: 3rem; }
+    .main__contacto .formulario .control {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      border: 1px solid #ced495;
+      font-size: 2rem;
       color: #ced495;
-      text-align: center; }
+      background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)); }
+    .main__contacto .formulario .botones {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly; }
+      .main__contacto .formulario .botones .boton {
+        width: 40%;
+        background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+        border: 1px solid #ced495;
+        color: #ced495;
+        border-radius: 5px; }
 
 .main__ubicacion {
-  grid-template-rows: 70vh; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
   .main__ubicacion #mapa {
-    margin: auto auto;
-    width: 70%;
-    height: 50vh; }
+    height: 600px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+
+@media screen and (max-width: 1353px) {
+  main .menu .titulo {
+    font-size: 45px; }
+  main #carousel .carousel-inner img {
+    height: 320px; } }
+
+@media screen and (max-width: 1193px) {
+  main #carousel .carousel-inner img {
+    height: 280px; }
+  main .video {
+    height: fit-content;
+    margin: auto; }
+    main .video iframe {
+      width: 360px;
+      margin-left: 2rem; }
+  main .tienda .tienda__card {
+    width: 320px;
+    height: 298.55px; }
+    main .tienda .tienda__card p {
+      font-size: 3rem; }
+  .main__ubicacion #mapa {
+    height: 500px;
+    width: 600px; }
+    .main__ubicacion #mapa iframe {
+      height: 300px;
+      width: 400px; } }
+
+@media screen and (max-width: 902px) {
+  header .registro ul li {
+    padding: 0.5rem; }
+  header nav ul {
+    width: 70%; }
+    header nav ul li a {
+      font-size: 2rem; }
+  main {
+    background-size: cover;
+    background-position: center;
+    grid-template-rows: repeat(4, auto); }
+    main #carousel {
+      grid-column: 2/12; }
+      main #carousel .carousel-inner img {
+        height: 300px; }
+    main .menu {
+      grid-column: 3/11;
+      grid-row: 2/3;
+      text-align: center; }
+    main .video {
+      grid-column: 2/12;
+      grid-row: 3/4; }
+    main .tienda {
+      grid-row: 4/5;
+      grid-row: 4/5; }
+      main .tienda .tienda__card {
+        width: 270px;
+        height: 220.55px; }
+        main .tienda .tienda__card img {
+          height: 190.55px; }
+        main .tienda .tienda__card p {
+          font-size: 2rem; } }
+
+@media screen and (max-width: 720px) {
+  footer {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    height: fit-content !important; } }
+
+@media screen and (max-width: 630px) {
+  header {
+    height: 235px; }
+    header .registro a {
+      font-size: 1rem !important; }
+    header nav {
+      flex-direction: column; }
+      header nav .logo, header nav .logo2 {
+        margin-bottom: 1rem; }
+      header nav ul {
+        width: 100%;
+        border-radius: 0;
+        margin: 0; }
+  main #carousel .carousel-inner img {
+    width: 310px;
+    height: 240px; }
+  main .menu {
+    grid-column: 2/12; }
+    main .menu .titulo {
+      text-align: center; }
+    main .menu ul {
+      text-align: center; }
+  .main__ubicacion #mapa {
+    height: 400px;
+    width: 450px; }
+    .main__ubicacion #mapa iframe {
+      height: 300px;
+      width: 350px; } }
+
+@media screen and (max-width: 500px) {
+  header {
+    height: fit-content; }
+    header nav {
+      padding: 0; }
+      header nav .logo, header nav .logo2 {
+        display: none; }
+      header nav .logo2 {
+        display: block; }
+      header nav ul {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        display: none; }
+        header nav ul li {
+          border-bottom: 2px solid white;
+          width: 100%;
+          text-align: center; }
+    header #btn-menu:checked ~ nav ul {
+      display: block;
+      margin-top: 400px; }
+  main #carousel .carousel-inner img {
+    height: 200px; }
+  main .menu {
+    grid-column: 2/12; }
+    main .menu .titulo {
+      font-size: 35px; }
+    main .menu ul li a {
+      font-size: 30px; }
+  main .video {
+    grid-column: 2/12;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 0; }
+    main .video iframe {
+      width: 250px;
+      height: 200px; }
+    main .video .titulo {
+      font-size: 35px; }
+  main .tienda .tienda__card {
+    width: 100%; }
+  .main__tienda {
+    grid-template-rows: repeat(5, auto);
+    row-gap: 10rem;
+    padding: 10rem 0; }
+    .main__tienda .container {
+      grid-column: 3/11;
+      height: fit-content; }
+      .main__tienda .container h2 {
+        font-size: 3rem; }
+      .main__tienda .container .prod__card h3 {
+        font-size: 2rem; }
+  .main__contacto .formulario h2 {
+    font-size: 3rem; }
+  .main__contacto .formulario .botones .boton {
+    width: 46%; }
+  .main__ubicacion #mapa {
+    grid-column: 2/12;
+    height: fit-content; }
+    .main__ubicacion #mapa iframe {
+      width: 350px;
+      height: 350px;
+      margin: 3rem 0px; } }
