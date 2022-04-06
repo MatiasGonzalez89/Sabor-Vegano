@@ -387,6 +387,7 @@ main {
                 position: absolute;
                 width: 100%;
                 display: none;
+                z-index: 1;
 
                 li {
                     border-bottom: 2px solid white;
@@ -399,6 +400,9 @@ main {
         #btn-menu:checked ~ nav ul{
             display: block;
             margin-top: 400px;
+        }
+        #btn-menu:checked ~ main #carousel{
+            display:none !important;
         }
     }
 
